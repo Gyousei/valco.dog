@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#1e1f26">
+<title>Valco | valco.dog</title>
+<meta name="description" content="Ways to reach Valco, info about Valco, and guidelines on what's okay and what's not.">
+<meta name="author" content="Valco">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://valco.dog/">
+<meta property="og:title" content="Valco">
+<meta property="og:description" content="Ways to reach Valco, info about Valco, and guidelines on what's okay and what's not.">
+<meta property="og:image" content="https://valco.dog/assets/img/avatar.png">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" type="image/png" href="assets/img/avatar.png">
+<link rel="stylesheet" href="assets/css/normalize.css">
+<link rel="stylesheet" href="assets/css/skeleton-auto.css">
+<link rel="stylesheet" href="assets/css/brands.css">
+<link rel="stylesheet" href="assets/css/animations.css">
+<style>
+.container { word-break: break-word; }
+.button:focus-visible { outline: 3px solid #03dac6; outline-offset: 3px; }
+
+/* Slow colour drift on the name (from the PolySleek theme) */
+h1 {
+  animation-name: anim-text-flow-keys;
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+  animation-delay: -19.8s;
+}
+@keyframes anim-text-flow-keys {
+  0% {
+    color: #d6b15c;
+  }
+  5% {
+    color: #785cd6;
+  }
+  10% {
+    color: #6ed65c;
+  }
+  15% {
+    color: #a55cd6;
+  }
+  20% {
+    color: #d65c6c;
+  }
+  25% {
+    color: #83d65c;
+  }
+  30% {
+    color: #ced65c;
+  }
+  35% {
+    color: #5cd695;
+  }
+  40% {
+    color: #5c91d6;
+  }
+  45% {
+    color: #5c68d6;
+  }
+  50% {
+    color: #5cb4d6;
+  }
+  55% {
+    color: #5cabd6;
+  }
+  60% {
+    color: #d6b15c;
+  }
+  65% {
+    color: #5cd65c;
+  }
+  70% {
+    color: #d6a55c;
+  }
+  75% {
+    color: #b15cd6;
+  }
+  80% {
+    color: #5c9fd6;
+  }
+  85% {
+    color: #d66c5c;
+  }
+  90% {
+    color: #5c93d6;
+  }
+  95% {
+    color: #5cbcd6;
+  }
+  100% {
+    color: #c65cd6;
+  }
+}
+
+/* Respect "reduce motion": no colour drift, no moving background */
+@media (prefers-reduced-motion: reduce) {
+  h1 { animation: none; color: #5c91d6; }
+  .background { display: none; }
+  .button { transition: none; }
+}
+</style>
+</head>
+<body>
+<canvas class="background" aria-hidden="true"></canvas>
+
+<div class="container">
+  <div class="row">
+    <div class="column" style="margin-top: 5%">
+      <img alt="Valco's avatar" id="avatar" class="rounded-avatar" src="assets/img/avatar.png" height="128" width="128" style="object-fit: cover;">
+      <h1>Valco</h1>
+
+      <h2>Hi! I'm Valco, and if you are reading this, I am probably currently a puppy. This makes communication difficult. Here, you can find ways to reach me, information about me, and guidelines about what's okay and what's not.</h2>
+
+      <div style="height: 25px"></div>
+      <h2>Contact me:</h2>
+      <a class="button button-hover" rel="noopener noreferrer nofollow noindex" href="https://discord.com/users/194568995087712256" target="_blank"><img alt="" class="icon" src="assets/img/discord.svg">Get in touch on Discord</a>
+      <a class="button button-hover" rel="noopener noreferrer nofollow noindex" href="https://t.me/digitalwuffer" target="_blank"><img alt="" class="icon" src="assets/img/telegram.svg">Reach out on Telegram</a>
+
+      <div style="height: 25px"></div>
+      <h2>The Rules:</h2>
+      <a class="button button-hover" href="/rules/"><svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4 6h2v2H4zM8 6h12v2H8zM4 11h2v2H4zM8 11h12v2H8zM4 16h2v2H4zM8 16h12v2H8z"/></svg>Yes and Nos</a>
+      <a class="button button-hover" rel="noopener noreferrer nofollow noindex" href="https://docs.google.com/spreadsheets/d/12QyQC-wwU037DNSBrwScal3_qGqbLo-M7ZyKuk1Rt2Q/edit?usp=sharing" target="_blank"><img alt="" class="icon" src="assets/img/sheet.png">A full list</a>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/particles.min.js"></script>
+<script>
+(function () {
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (reduce || typeof Particles === "undefined") return;
+
+  window.onload = function () {
+    Particles.init({ selector: ".background" });
+  };
+  Particles.init({
+    selector: ".background",
+    color: ["#03dac6", "#ff0266", "#000000"],
+    connectParticles: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        options: {
+          color: ["#faebd7", "#03dac6", "#ff0266"],
+          maxParticles: 43,
+          connectParticles: false
+        }
+      }
+    ]
+  });
+})();
+</script>
+</body>
+</html>

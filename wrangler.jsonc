@@ -1,0 +1,9 @@
+{
+  // IMPORTANT: "name" must exactly match your existing Worker's name
+  // in the Cloudflare dashboard (Workers & Pages), or the build will fail.
+  "name": "valco-dog",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./public"
+  }
+}

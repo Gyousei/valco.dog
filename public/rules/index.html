@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yes and Nos</title>
+<!--
+  HOW TO EDIT: change the text inside each <li>. Add a line by copying a whole <li>...</li>.
+  Every item that starts with [Placeholder] is made-up example text. Replace it with your real
+  boundaries and delete the "[Placeholder]" part before publishing.
+-->
+<style>
+  :root {
+    --bg: #1e1f26;
+    --panel: #222840;
+    --text: #ffffff;
+    --muted: #b8bdd0;
+    --yes: #03dac6;
+    --ask: #ffb74d;
+    --no: #ff0266;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Roboto', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.55;
+  }
+  .wrap { max-width: 600px; margin: 0 auto; padding: 0 16px 48px; }
+  a { color: var(--yes); }
+  :focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+
+  header { padding: 28px 0 8px; text-align: center; }
+  h1 { margin: 0 0 12px; font-size: 1.9rem; letter-spacing: 0.04em; }
+  .note {
+    background: var(--panel);
+    border-radius: 14px;
+    padding: 16px 18px;
+    text-align: left;
+  }
+  .note p { margin: 0 0 8px; }
+  .note p:last-child { margin: 0; }
+
+  nav {
+    position: sticky; top: 0; z-index: 5;
+    background: var(--bg);
+    padding: 10px 0;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px;
+  }
+  nav a {
+    display: block; text-align: center; text-decoration: none;
+    min-height: 52px; line-height: 52px;
+    border-radius: 12px; font-weight: 700;
+    background: var(--panel); color: var(--text);
+    border: 2px solid currentColor;
+  }
+  nav a.yes { color: var(--yes); }
+  nav a.ask { color: var(--ask); }
+  nav a.no  { color: var(--no); }
+
+  section {
+    margin-top: 20px;
+    background: var(--panel);
+    border-radius: 14px;
+    padding: 18px 18px 8px;
+    border-left: 8px solid var(--c);
+  }
+  section.yes { --c: var(--yes); }
+  section.ask { --c: var(--ask); }
+  section.no  { --c: var(--no); }
+  h2 { margin: 0 0 4px; font-size: 1.5rem; color: var(--c); }
+  .sub { margin: 0 0 12px; color: var(--muted); font-size: 1rem; }
+  ul { list-style: none; margin: 0; padding: 0; }
+  li {
+    padding: 12px 0 12px 34px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+    position: relative;
+  }
+  li::before {
+    content: attr(data-mark);
+    position: absolute; left: 0; top: 11px;
+    font-weight: 700; color: var(--c); width: 24px; text-align: center;
+  }
+
+  .back {
+    display: block; margin-top: 28px; text-align: center; text-decoration: none;
+    min-height: 56px; line-height: 56px; border-radius: 14px;
+    background: var(--panel); font-weight: 500; letter-spacing: 0.08em;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <h1>Dos and Don'ts</h1>
+    <div class="note">
+      <p><strong>I may not be able to talk right now.</strong> These are some answers to frequent questions.</p>
+    </div>
+  </header>
+
+  <nav aria-label="Jump to a section">
+    <a class="yes" href="#yes">✓ Yes</a>
+    <a class="ask" href="#ask">? Ask first</a>
+    <a class="no" href="#no">✕ No</a>
+  </nav>
+
+  <section id="yes" class="yes">
+    <h2>✓ Yes, that's fine</h2>
+    <p class="sub">Puppy whining noises</p>
+    <ul>
+      <li data-mark="✓">Touching, petting or scritching</li>
+      <li data-mark="✓">Pull me around by my collar</li>
+      <li data-mark="✓">Hugging and snuggling</li>
+    </ul>
+  </section>
+
+  <section id="ask" class="ask">
+    <h2>? Ask first</h2>
+    <p class="sub">Please check with me, or my mate, before you do these. I may have involuntary responses to these if unexpected. Disregard this if you discussed this with me prior to the scene.</p>
+    <ul>
+      <li data-mark="?">Videos or photos</li>
+      <li data-mark="?">Kissing. You may initiate a kiss, but if I do not reciprocate immediately, please do not continue</li>
+      <li data-mark="?">Any penetrative sexual activity</li>
+    </ul>
+  </section>
+
+  <section id="no" class="no">
+    <h2>✕ No, please don't</h2>
+    <p class="sub">These make me uncomfortable or will induce anxiety attacks. Please avoid.</p>
+    <ul>
+      <li data-mark="✕">Choking/breath control (I will make it clear, even in pupspace, if my collar is being pulled too tight)</li>
+      <li data-mark="✕">Attempt to remove my cage. Chastity is a core part of my identity as a puppy, and is a part of me. Please do not uncage me.</li>
+
+    </ul>
+  </section>
+
+  <section class="note" style="border-left:8px solid #fff;">
+    <h2 style="color:#fff;">If something seems wrong</h2>
+    <ul>
+      <li data-mark="!" style="--c:#fff;">Please contact my mate, @ashneededausernamesohereitis (Telegram).</li>
+      <li data-mark="!" style="--c:#fff;">If a medical emergency is in progress, please call emergency services first. You can provide them with the following information if I am unable to communicate: No known allergies to medications. Pre-diabetic. Known severe food allergies: Strawberries, cherries, almonds.</li>
+    </ul>
+  </section>
+
+  <a class="back" href="/">← BACK TO MY LINKS</a>
+
+</div>
+</body>
+</html>
